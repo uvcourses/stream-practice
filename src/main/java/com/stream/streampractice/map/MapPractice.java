@@ -24,7 +24,6 @@ public class MapPractice {
 				.map(scorecard -> {return scorecard.getManOfTheMatch().toUpperCase();}).collect(Collectors.toList())
 				.forEach(s -> logger.info("PLAYER NAME {}",s)); */
         logger.info("Player Name     ::::: Team1 ::::: Team2 :::::: Stadium");
-        logger.info("-----------------------------------------------------------");
         scorecards.stream().filter(scorecard -> scorecard.getManOfTheMatch()!=null)
                 .map(scorecard -> {
                     return PlayerDetails.builder()
